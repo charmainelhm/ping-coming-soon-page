@@ -8,7 +8,7 @@
 
   --fs-xl: 4rem;
   --fs-600: 2.4rem;
-  --fs-500: 1.8rem;
+  --fs-500: 1.7rem;
   --fs-400: 1.3rem;
   --fs-300: 1.2rem;
 }
@@ -23,6 +23,7 @@
 
 .container {
   width: 90%;
+  max-width: 630px;
   margin: 0 auto;
 }
 
@@ -35,10 +36,11 @@ body {
   font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
   font-size: var(--fs-400);
   color: var(--color-primary);
+  min-height: 100vh;
 }
 
 h1 {
-  font-size: var(--fs-600);
+  font-size: clamp(var(--fs-600), (var(--fs-600) + 1.5vw), var(--fs-xl));
   font-weight: 300;
   color: var(--color-secondary);
   margin: 0;
@@ -47,11 +49,11 @@ h1 {
 /* Header */
 header {
   text-align: center;
-  margin: 8rem 0 4rem;
+  padding: 8rem 0 4rem;
 }
 
 .header__logo {
-  width: 55px;
+  width: clamp(55px, 12vw, 85px);
   margin-bottom: 5rem;
 }
 
@@ -167,4 +169,39 @@ header {
 
 .attribution a:hover {
   opacity: 0.6;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    padding: 5rem 0 3rem;
+  }
+
+  .header__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .header__description {
+    font-size: var(--fs-500);
+  }
+
+  .form {
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
+  .form__input {
+    width: 70%;
+  }
+
+  .form__btn {
+    width: 30%;
+  }
+
+  .illustration {
+    margin-bottom: 4rem;
+  }
+
+  .attribution {
+    margin-bottom: 0;
+  }
 }
