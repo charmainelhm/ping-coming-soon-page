@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Frontend Mentor | Ping coming soon page</title>
+
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header>
@@ -33,12 +35,17 @@
       <p class="header__description">Subscribe and get notified</p>
     </header>
     <main class="container">
-      <form class="form">
-        <input
-          class="form-item form__input input--email input--error"
-          type="email"
-          placeholder="Your email address..."
-        />
+      <form novalidate class="form">
+        <label class="form__input-grp">
+          <input
+            class="form-item form__input input--email"
+            type="email"
+            name="email"
+            placeholder="Your email address..."
+            required
+          />
+          <span class="message"></span>
+        </label>
         <button class="form-item form__btn">Notify Me</button>
       </form>
       <img

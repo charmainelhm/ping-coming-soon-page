@@ -3,7 +3,7 @@
   --color-secondary: #969696;
   --color-accent: #4f7df3;
   --color-accent-secondary: #c2d3ff;
-  --color-error: #ff5263;
+  --color-error: #ff5263be;
   --color-shadow: #7990cc50;
 
   --fs-xl: 4rem;
@@ -76,10 +76,14 @@ header {
 }
 
 .form-item {
-  width: 90%;
+  width: 100%;
   padding: 1.2rem;
   border: none;
   border-radius: 50px;
+}
+
+.form > * {
+  width: 90%;
 }
 
 .form__input {
@@ -92,7 +96,12 @@ header {
   color: var(--color-accent-secondary);
 }
 
+.form__input:focus {
+  outline: 0;
+}
+
 .form__btn {
+  border: 2px solid var(--color-accent);
   background-color: var(--color-accent);
   box-shadow: 0 5px 8px 3px var(--color-shadow);
   color: white;
@@ -103,6 +112,27 @@ header {
 
 .form__btn:hover {
   opacity: 0.8;
+}
+
+.input--error {
+  border-color: var(--color-error);
+}
+
+.message--visible {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.message--error {
+  color: var(--color-error);
+}
+
+.message--submitted {
+  color: var(--color-accent);
 }
 
 /* Illustration */
@@ -116,7 +146,7 @@ header {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .social-link {
@@ -187,10 +217,16 @@ header {
   .form {
     flex-direction: row;
     margin-bottom: 5rem;
+    align-items: flex-start;
   }
 
-  .form__input {
+  .form_input-grp {
     width: 70%;
+  }
+
+  .message--visible {
+    text-align: start;
+    padding: 1rem 0 0 2.5rem;
   }
 
   .form__btn {
