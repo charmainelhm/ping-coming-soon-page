@@ -27,22 +27,41 @@
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
-    We are launching soon! Subscribe and get notified Notify Me &copy; Copyright
-    Ping. All rights reserved.
-    <form class="form">
-      <input
-        class="form-item form__input form__input--email"
-        type="email"
-        placeholder="Your email address..."
+    <header>
+      <img class="header__logo" src="images/logo.svg" alt="Ping" />
+      <h1 class="header__title">We are launching <span>soon!</span></h1>
+      <p class="content-descrp">Subscribe and get notified</p>
+    </header>
+    <main class="container">
+      <form class="form">
+        <input
+          class="form-item form__input form__input--email"
+          type="email"
+          placeholder="Your email address..."
+        />
+        <button class="form-item form__btn">Notify Me</button>
+      </form>
+      <img
+        class="illustration"
+        src="images/illustration-dashboard.png"
+        alt="Ping interface"
       />
-      <button class="form-item form__btn">Notify Me</button>
-    </form>
+    </main>
     <footer>
+      <div class="social-links-grp">
+        <a class="social-link" href=""><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href=""><i class="fab fa-twitter"></i></a>
+        <a class="social-link" href=""><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by
+        <a href="https://github.com/charmainelhm" target="_blank"
+          >Charmaine Lee</a
+        >.
       </p>
     </footer>
   </body>
